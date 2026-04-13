@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flyer Colixo Tarifs</title>
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --card: #121212;
+      --accent: #ff7a00;
+      --accent-2: #ffb347;
+      --text: #ffffff;
+      --muted: #cfcfcf;
+      --line: rgba(255,255,255,0.1);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: linear-gradient(180deg, #050505, #111111);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+    .flyer {
+      width: 210mm;
+      min-height: 297mm;
+      background: radial-gradient(circle at top right, rgba(255,122,0,0.18), transparent 22%), linear-gradient(180deg, #090909, #121212);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 26mm 18mm;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #111;
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+      font-weight: 900;
+    }
+    h1 {
+      margin: 0;
+      font-size: 38px;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 16px;
+    }
+    .badge {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid var(--line);
+      color: #fff;
+      font-weight: 700;
+    }
+    .hero {
+      margin: 24px 0 28px;
+      padding: 22px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(255,122,0,0.12), rgba(255,255,255,0.04));
+      border: 1px solid var(--line);
+    }
+    .hero h2 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 70ch;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 22px 0 28px;
+    }
+    .item {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+    }
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+    .item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .section-title {
+      margin: 28px 0 14px;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+    }
+    th, td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+    }
+    th {
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    td { color: var(--muted); }
+    td strong { color: #fff; }
+    .note {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .cta {
+      margin-top: 30px;
+      padding: 22px;
+      border-radius: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, rgba(255,122,0,0.16), rgba(255,255,255,0.05));
+      border: 1px solid var(--line);
+    }
+    .cta strong {
+      display: block;
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+    .cta p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .contact {
+      text-align: right;
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .contact span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 4px;
+    }
+    @media print {
+      body { background: white; padding: 0; }
+      .flyer { box-shadow: none; border-radius: 0; border: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+    <div class="top">
+      <div class="brand">
+        <div class="logo">C</div>
+        <div>
+          <h1>Colixo</h1>
+          <div class="subtitle">Livraison simple, rapide, efficace</div>
+        </div>
+      </div>
+      <div class="badge">Tarifs 2026</div>
+    </div>
 
+    <div class="hero">
+      <h2>Des envois plus simples pour les entreprises suisses</h2>
+      <p>Collecte directe, livraison rapide, image professionnelle : Colixo simplifie vos expéditions avec une approche claire, premium et adaptée à vos besoins.</p>
+    </div>
+
+    <div class="grid">
+      <div class="item"><strong>Collecte directe</strong><span>Nous récupérons vos colis directement chez vous.</span></div>
+      <div class="item"><strong>Livraison rapide</strong><span>Options 48h, 24h et express selon vos priorités.</span></div>
+      <div class="item"><strong>Devis sur mesure</strong><span>Tarifs adaptés au volume et à la fréquence de vos envois.</span></div>
+    </div>
+
+    <div class="section-title">Tarifs standards</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Poids</th>
+          <th>48h</th>
+          <th>24h</th>
+          <th>Express 6h</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Colis léger</strong></td><td>&lt; 2 kg</td><td>CHF 8.90</td><td>CHF 10.90</td><td>CHF 18.00</td></tr>
+        <tr><td><strong>Colis moyen</strong></td><td>2 – 10 kg</td><td>CHF 11.90</td><td>CHF 14.90</td><td>CHF 22.00</td></tr>
+        <tr><td><strong>Colis lourd</strong></td><td>10 – 30 kg</td><td>CHF 18.90</td><td>CHF 22.90</td><td>CHF 32.00</td></tr>
+        <tr><td><strong>Encombrant</strong></td><td>&gt; 30 kg</td><td>CHF 29.00</td><td>CHF 34.00</td><td>CHF 49.00</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Tarifs indicatifs. Un devis personnalisé peut être proposé selon le volume d’expédition.</div>
+
+    <div class="section-title">Tarifs abonnement entreprises</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>48h</th>
+          <th>24h</th>
+          <th>Express</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>&lt; 2 kg</strong></td><td>CHF 7.50</td><td>CHF 9.50</td><td>CHF 15.00</td></tr>
+        <tr><td><strong>2 – 10 kg</strong></td><td>CHF 9.90</td><td>CHF 12.90</td><td>CHF 19.00</td></tr>
+        <tr><td><strong>10 – 30 kg</strong></td><td>CHF 16.90</td><td>CHF 20.90</td><td>CHF 28.00</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Abonnement dès 2 envois par semaine minimum.</div>
+
+    <div class="section-title">Suppléments</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Collecte à domicile</strong></td><td>CHF 5.00</td></tr>
+        <tr><td><strong>Livraison le jour même</strong></td><td>+ CHF 10.00</td></tr>
+        <tr><td><strong>Créneau horaire précis</strong></td><td>+ CHF 5.00</td></tr>
+        <tr><td><strong>Zone éloignée</strong></td><td>+ CHF 5.00 à 10.00</td></tr>
+        <tr><td><strong>Attente &gt; 10 min</strong></td><td>CHF 10.00</td></tr>
+        <tr><td><strong>Transport direct</strong></td><td>CHF 1.50 à 2.50 / km</td></tr>
+      </tbody>
+    </table>
+
+    <div class="cta">
+      <div>
+        <strong>Réduisez le temps perdu sur vos expéditions</strong>
+        <p>Demandez votre devis personnalisé et découvrez une logistique plus simple.</p>
+      </div>
+      <div class="contact">
+        info@colixo.ch
+        <span>colixo.ch</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
